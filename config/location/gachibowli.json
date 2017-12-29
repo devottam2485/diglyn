@@ -1,0 +1,5 @@
+{
+  "location": "gachibowli",
+  "courses": ('python', 'android', 'devops', 'aws', 'unity3d', 'data analysis', 'visual design', 'data science', 'big data', 'digital marketing', 'block chain')
+  "trainers": ('abc', 'xyz')
+}

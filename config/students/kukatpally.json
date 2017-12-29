@@ -1,0 +1,46 @@
+{
+  "dl_st_kp_00876": {
+    "__profession": "sdfgdg", 
+    "__email": "sdfdsgd@.com", 
+    "__first_name": "SDFGSDFG", 
+    "__address": "dsfgdsgffdg", 
+    "__last_name": "SDFGDSGF", 
+    "__mobile": "3243253454", 
+    "__date_of_birth": "dsfgdsfg", 
+    "__courses_opted": [
+      "python", 
+      "android", 
+      "devops", 
+      "data analysis"
+    ], 
+    "__qualification": "sdfgdsgf"
+  }, 
+  "dl_st_kp_00118": {
+    "__profession": "job", 
+    "__email": "ddutta@gmail.com", 
+    "__first_name": "DEVOTTAM", 
+    "__address": "kukatpally", 
+    "__last_name": "DUTTA", 
+    "__mobile": "9892598925", 
+    "__date_of_birth": "24121985", 
+    "__courses_opted": [
+      "android", 
+      "python"
+    ], 
+    "__qualification": "mca"
+  }, 
+  "dl_st_kp_00434": {
+    "__profession": "sdfsdf", 
+    "__email": "sdfjfsdf@gmail.com", 
+    "__first_name": "ABC", 
+    "__address": "dsfsdf", 
+    "__last_name": "ABC", 
+    "__mobile": "3456435645", 
+    "__date_of_birth": "4323234", 
+    "__courses_opted": [
+      "devops", 
+      "aws"
+    ], 
+    "__qualification": "sdfsf"
+  }
+}

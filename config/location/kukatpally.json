@@ -1,0 +1,20 @@
+{
+  "courses": [
+    "python", 
+    "android", 
+    "devops", 
+    "aws", 
+    "unity3d", 
+    "data analysis", 
+    "visual design", 
+    "data science", 
+    "big data", 
+    "digital marketing", 
+    "block chain"
+  ], 
+  "location": "kukatpally", 
+  "trainers": [
+    "def", 
+    "jkl"
+  ]
+}
