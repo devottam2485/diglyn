@@ -1,26 +1,21 @@
 from location import DLLocation
 from DLStudent import *
 from DLMentor import *
-from DLStatData import digital_lync_chart
-
 
 from __UI import DLTrackerUI
 from PyQt4 import QtCore
 from PyQt4 import QtGui
 
 import config
-import numpy
 import time
-import json
 import sys
 
 DL_SPLASH = posixpath.join(os.path.dirname(__file__), 'assets', 'icon', 'dl.png')
 DL_ICON_PATH = posixpath.join(os.path.dirname(__file__), 'assets', 'icon', 'dl3.png')
 
-class Digital_Lync(QtGui.QMainWindow, DLTrackerUI.Ui_MainWindow, digital_lync_student, digital_lync_mentor, digital_lync_chart):
+class Digital_Lync(QtGui.QMainWindow, DLTrackerUI.Ui_MainWindow, digital_lync_student, digital_lync_mentor):
     def __init__(self, parent=None):
         super(Digital_Lync, self).__init__()
-        digital_lync_chart.__init__(self)
         self.Digital_Lync_location = DLLocation().location
         self.setWindowTitle("Digital Lync")
         self.setWindowIcon(QtGui.QIcon(DL_ICON_PATH))
@@ -60,7 +55,6 @@ class Digital_Lync(QtGui.QMainWindow, DLTrackerUI.Ui_MainWindow, digital_lync_st
             self.course_label.setText("Subjects")
             self.course_opted_label.setText("Mentor Subject Expert")
             self.id_label.setText("Mentor ID")
-            self.plot_mentor_chart()
             self.bar_graph_label.setPixmap(QtGui.QPixmap('./assets/stat_data/mentor_count_bar.png'))
         else:
             self.generateID_pushButton.setText("Generate Student ID")
@@ -69,7 +63,6 @@ class Digital_Lync(QtGui.QMainWindow, DLTrackerUI.Ui_MainWindow, digital_lync_st
             self.course_label.setText("Courses Available")
             self.course_opted_label.setText("Courses Opted")
             self.id_label.setText("Student ID")
-            self.plot_student_chart()
             self.bar_graph_label.setPixmap(QtGui.QPixmap('./assets/stat_data/student_count_bar.png'))
         self.registration_auto_completer()
         self.reset_student_page()
@@ -221,7 +214,8 @@ class Digital_Lync(QtGui.QMainWindow, DLTrackerUI.Ui_MainWindow, digital_lync_st
 
     def validate_email_id(self):
         valid_email = str(self.emailid_lineEdit.text())
-        if str(self.emailid_lineEdit.text()).rsplit('.', 1)[-1] in ('com', 'in', 'org', 'gov', 'edu', 'net') and len(str(self.emailid_lineEdit.text()).split('@'))==2:
+        if str(self.emailid_lineEdit.text()).rsplit('.', 1)[-1] in ('com', 'in', 'org', 'gov', 'edu', 'net') and \
+                        len(str(self.emailid_lineEdit.text()).split('@')) == 2:
             self.emailid_lineEdit.setText(valid_email)
             self.email_id_label.setText('valid')
             self.update_pushButton.setEnabled(True)
@@ -276,6 +270,7 @@ class Digital_Lync(QtGui.QMainWindow, DLTrackerUI.Ui_MainWindow, digital_lync_st
                 self.update_mentor_details(registration_fname, registration_lname, registration_dob, registration_qulfctn, registration_addrs, registration_mob, registration_email, registration_prof, registration_course_opted)
         self.reset_student_page()
         self.registration_auto_completer()
+        self.registration_ui_changes()
 
 
     def load_registration_id(self):

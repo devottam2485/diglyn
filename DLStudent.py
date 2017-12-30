@@ -1,9 +1,11 @@
 import json
 import random
 import posixpath
+import time
 import os
 
 from location import DLLocation
+from DLStatData import *
 
 root_student_path = os.path.dirname(__file__)
 
@@ -11,8 +13,9 @@ loc = DLLocation().location
 student_config_file_path = posixpath.join(root_student_path, 'config/students', loc + '.json')
 
 
-class digital_lync_student(object):
+class digital_lync_student(object, digital_lync_chart):
     def __init__(self, student_ID):
+        digital_lync_chart.__init__(self)
         self.__student_ID = student_ID
         self.student_file_path = student_config_file_path
         self.load_student_dict()
@@ -76,6 +79,10 @@ class digital_lync_student(object):
         open_student_file = open(self.student_file_path, 'w')
         json.dump(self.student_dict, open_student_file, indent=2)
         open_student_file.close()
+        print("Updating...")
+        time.sleep(3)
+        self.plot_student_chart()
+        print("Updated.")
         self.student_dict={}
 
 

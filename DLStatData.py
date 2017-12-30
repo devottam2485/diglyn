@@ -2,11 +2,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import posixpath
 import json
+import time
 import os
 import config
 
 from location import DLLocation
 from collections import defaultdict
+
 
 root_file_path = posixpath.join(os.path.dirname(__file__), 'config')
 
@@ -54,22 +56,24 @@ class digital_lync_chart:
         return student_course_count_dict
 
     def plot_student_chart(self):
+        print("Plotting Student chart...")
         course_label = []
         course_size = []
         for item, count in self.get_student_course_count().items():
             course_label.append(item)
             course_size.append(count)
         plt.rc('font', size=8)
-        self.fig.set_size_inches(10.0, 5.0)
+        self.fig.set_size_inches(12.0, 5.0)
         y_pos = np.arange(len(course_label))
         self.ax.barh(y_pos, course_size, align='center', alpha=0.5, color='green')
         self.ax.set_yticks(y_pos)
         self.ax.set_yticklabels(course_label)
         self.ax.set_ylabel('Courses')
         self.ax.invert_yaxis()
-        self.ax.set_xlabel('Number Of Students')
+        self.ax.set_xlabel('Number Of Students (Total: {})'.format(str(self.get_total_student_count())))
         self.ax.set_title('Digital Lync Student')
         plt.savefig('./assets/stat_data/student_count_bar.png')
+        time.sleep(2)
         # plt.show()
 
     def plot_mentor_chart(self):

@@ -1,4 +1,33 @@
 {
+  "dl_st_kp_00529": {
+    "__profession": "JOB", 
+    "__email": "rn@gmail.com", 
+    "__first_name": "RAJU", 
+    "__address": "JUBILEE HILLS", 
+    "__last_name": "NARASIMHA", 
+    "__mobile": "7896556987", 
+    "__date_of_birth": "23423434", 
+    "__courses_opted": [
+      "android", 
+      "big data", 
+      "visual design", 
+      "block chain"
+    ], 
+    "__qualification": "GRADUATE"
+  }, 
+  "dl_st_kp_00963": {
+    "__profession": "DEVELOPER", 
+    "__email": "sk2@gmail.com", 
+    "__first_name": "SHIVA", 
+    "__address": "KPHB", 
+    "__last_name": "KONDURI", 
+    "__mobile": "9874512365", 
+    "__date_of_birth": "34534534", 
+    "__courses_opted": [
+      "visual design"
+    ], 
+    "__qualification": "MCA"
+  }, 
   "dl_st_kp_00876": {
     "__profession": "sdfgdg", 
     "__email": "sdfdsgd@.com", 
@@ -15,20 +44,6 @@
     ], 
     "__qualification": "sdfgdsgf"
   }, 
-  "dl_st_kp_00118": {
-    "__profession": "job", 
-    "__email": "ddutta@gmail.com", 
-    "__first_name": "DEVOTTAM", 
-    "__address": "kukatpally", 
-    "__last_name": "DUTTA", 
-    "__mobile": "9892598925", 
-    "__date_of_birth": "24121985", 
-    "__courses_opted": [
-      "android", 
-      "python"
-    ], 
-    "__qualification": "mca"
-  }, 
   "dl_st_kp_00434": {
     "__profession": "sdfsdf", 
     "__email": "sdfjfsdf@gmail.com", 
@@ -42,5 +57,64 @@
       "aws"
     ], 
     "__qualification": "sdfsf"
+  }, 
+  "dl_st_kp_00232": {
+    "__profession": "JOB", 
+    "__email": "sujith.poludas@gmail.com", 
+    "__first_name": "SUJITHRAM", 
+    "__address": "Manikonda", 
+    "__last_name": "POLUDASU", 
+    "__mobile": "9856996589", 
+    "__date_of_birth": "21111998", 
+    "__courses_opted": [
+      "python", 
+      "android", 
+      "aws", 
+      "unity3d", 
+      "data analysis", 
+      "visual design", 
+      "data science", 
+      "big data", 
+      "digital marketing"
+    ], 
+    "__qualification": "Graduate"
+  }, 
+  "dl_st_kp_00498": {
+    "__profession": "dfgdfg", 
+    "__email": "gfsd@lkj.com", 
+    "__first_name": "TANAY", 
+    "__address": "dpokfmspodijg\t", 
+    "__last_name": "KARAMAKAR", 
+    "__mobile": "1236556321", 
+    "__date_of_birth": "23432454", 
+    "__courses_opted": [
+      "python", 
+      "android", 
+      "devops", 
+      "aws", 
+      "unity3d", 
+      "data analysis", 
+      "visual design", 
+      "data science", 
+      "big data", 
+      "digital marketing", 
+      "block chain"
+    ], 
+    "__qualification": "sfkg"
+  }, 
+  "dl_st_kp_00118": {
+    "__profession": "job", 
+    "__email": "ddutta@gmail.com", 
+    "__first_name": "DEVOTTAM", 
+    "__address": "kukatpally", 
+    "__last_name": "DUTTA", 
+    "__mobile": "9892598925", 
+    "__date_of_birth": "24121985", 
+    "__courses_opted": [
+      "android", 
+      "visual design", 
+      "digital marketing"
+    ], 
+    "__qualification": "mca"
   }
 }

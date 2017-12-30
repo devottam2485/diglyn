@@ -4,6 +4,7 @@ import posixpath
 import os
 
 from location import DLLocation
+from DLStatData import *
 
 root_mentor_path = os.path.dirname(__file__)
 
@@ -11,8 +12,9 @@ loc = DLLocation().location
 mentor_config_file_path = posixpath.join(root_mentor_path, 'config/mentors', loc + '.json')
 
 
-class digital_lync_mentor(object):
+class digital_lync_mentor(object, digital_lync_chart):
     def __init__(self, mentor_ID):
+        digital_lync_chart.__init__(self)
         self.__mentor_ID = mentor_ID
         self.mentor_file_path = mentor_config_file_path
         self.load_mentor_dict()
@@ -76,6 +78,7 @@ class digital_lync_mentor(object):
         open_mentor_file = open(self.mentor_file_path, 'w')
         json.dump(self.mentor_dict, open_mentor_file, indent=2)
         open_mentor_file.close()
+        self.plot_mentor_chart()
         self.mentor_dict={}
 
 
